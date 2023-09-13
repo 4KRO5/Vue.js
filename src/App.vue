@@ -1,44 +1,46 @@
 <script setup>
 import { ref } from 'vue'
 
-const count = ref(0)
-const name = ref('')
-const num1 = ref()
-const num2 = ref()
-const resultado = ref()
+const people = ref([])
 
-function incrementCount() {
-  count.value++
-}
+const firstName = ref('')
+const lastName = ref('')
 
-function sumar() {
-  resultado.value = num1.value + num2.value
+const saveData = () => {
+  if (firstName.value && lastName.value) {
+    const person = {
+      firstName: firstName.value,
+      lastName: lastName.value
+    }
+    people.value.push(person)
+    firstName.value = ''
+    lastName.value = ''
+  }
 }
 </script>
 
 <template>
   <div class="container">
-    <!-- Contador de clicks -->
     <fieldset>
-      <legend>Contador de clicks</legend>
-      <button @click="incrementCount">No. Clicks: {{ count }}</button>
+      <legend>Nombre(s):</legend>
+      <input type="text" v-model="firstName" placeholder="Nombres">
+      <input type="text" v-model="lastName" placeholder="Apellidos">
+      <button @click="saveData">Save Data</button>
     </fieldset>
-    <br>
 
-    <!-- v-model -->
-    <fieldset>
-      <legend>Bienvenido {{ name }}</legend>
-      <input type="text" v-model="name" placeholder="Escribe aquí tu nombre">
-    </fieldset>
-    <br>
-
-    <!-- Suma de numeros -->
-    <fieldset>
-      <legend>Suma de numeros</legend>
-      <input type="number" v-model="num1" placeholder="Primer número">
-      <input type="number" v-model="num2" placeholder="Segundo número">
-      <button @click="sumar">Sumar</button>
-      <h4>Resultado: {{ resultado }}</h4>
-    </fieldset>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Lastname</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="person in people" :key="person.firstName + person.lastName">
+          <td>{{ person.firstName }}</td>
+          <td>{{ person.lastName }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>

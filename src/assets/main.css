@@ -39,6 +39,7 @@ input[type="text"] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 /* Estilo para los campos de entrada numérica */
@@ -54,5 +55,33 @@ input[type="number"] {
 h4 {
   font-weight: bold;
   margin-top: 10px;
-  margin-bottom: -3px; /* Reduzco el margen inferior a 0 */
+  margin-bottom: -3px;
+  /* Reduzco el margen inferior a 0 */
+}
+
+/* Estilo para la tabla */
+table {
+  text-align: center;
+  width: 32%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+/* Estilo para las celdas de encabezado */
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Estilo para las celdas de datos */
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Estilo para las filas impares (opcional) */
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
 }
