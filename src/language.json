@@ -1,0 +1,22 @@
+{
+    "en": {
+        "error": "Error loading user data: ",
+        "welcome": "Welcome",
+        "selectLanguage": "Select Language:",
+        "login": "Login",
+        "email": "Email",
+        "password": "Password",
+        "loginButton": "Login",
+        "errorMessage": "Oops! It seems your credentials are not valid. Make sure to enter the correct information and try again"
+    },
+    "es": {
+        "error": "Error al cargar los datos de usuarios: ",
+        "welcome": "Bienvenido",
+        "selectLanguage": "Seleccione el idioma:",
+        "login": "Iniciar sesión",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "loginButton": "Iniciar sesión",
+        "errorMessage": "¡Oops! Parece que tus credenciales no son válidas. Asegúrate de ingresar la información correcta y vuelve a intentar"
+    }
+}
