@@ -1,0 +1,26 @@
+[
+  {
+    "nombres": "Juan",
+    "apellidoPaterno": "Pérez",
+    "apellidoMaterno": "Gómez",
+    "teléfono": "1234567890"
+  },
+  {
+    "nombres": "María",
+    "apellidoPaterno": "López",
+    "apellidoMaterno": "Martínez",
+    "teléfono": "9876543210"
+  },
+  {
+    "nombres": "Carlos",
+    "apellidoPaterno": "González",
+    "apellidoMaterno": "Rodríguez",
+    "teléfono": "5555555555"
+  },
+  {
+    "nombres": "Laura",
+    "apellidoPaterno": "Fernández",
+    "apellidoMaterno": "Sánchez",
+    "teléfono": "7777777777"
+  }
+]

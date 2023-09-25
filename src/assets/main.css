@@ -1,120 +1,156 @@
-/* Estilo para los fieldset */
-fieldset {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilo para el menú desplegable */
-.language-select {
-  margin-bottom: 20px;
-  text-align: center;
+/* Estilos generales de la aplicación */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #f0f0f0;
 }
 
-.language-select label {
-  font-weight: bold;
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  padding: 20px;
 }
 
-.language-select select {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 6%;
-  margin: 0 auto;
-  margin-left: 5px;
-}
-
-/* Estilo para las leyendas */
-legend {
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-/* Estilo para el contenedor principal que centrará todo verticalmente */
-.container {
-  margin-top: 150px;
-}
-
-/* Estilo para los botones */
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 5px 10px;
+/* Botón de eliminar */
+.delete-button {
+  background-color: #ff0000;
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
   cursor: pointer;
 }
 
-/* Estilo para el mensaje de error */
-.error-message {
-  color: red;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
-  margin-bottom: 0px;
+.delete-button:hover {
+  background-color: #cc0000;
 }
 
-/* Estilo para los campos de entrada de texto */
-input[type="email"] {
-  width: 97%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
+/* Contenedor flexible para elementos */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
 }
 
-input[type="password"] {
-  width: 97%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-/* Estilo para los campos de entrada numérica */
-input[type="number"] {
-  width: 120px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-/* Estilo para el resultado */
-h4 {
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-/* Estilo para la tabla */
-table {
-  text-align: center;
-  width: 32%;
-  border-collapse: collapse;
-  margin: 20px auto;
-}
-
-/* Estilo para las celdas de encabezado */
-th {
-  background-color: #007bff;
+/* Formulario de registro */
+.form-register {
+  background: #24303c;
+  border-radius: 5px;
+  font-family: 'calibri';
   color: white;
+  box-shadow: 7px 13px 37px #000;
+  max-width: 400px;
+  text-align: center;
+  flex: 1;
+  padding: 30px;
+  margin-right: 75px;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Controles de formulario */
+.controls {
+  width: 100%;
+  background: #24303c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+/* Enlaces en el formulario de registro */
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  text-decoration: underline;
+}
+
+/* Botones en el formulario de registro */
+.form-register .botones {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.form-register .botones:hover {
+  background-color: #163f94;
+}
+
+/* Contenedor de tabla */
+.table-container {
+  flex: 1;
+  margin-top: 10px;
+}
+
+/* Tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'calibri';
+}
+
+/* Encabezados y celdas de tabla */
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #1f53c5;
+}
+
+/* Estilo para encabezados de tabla */
+.table th {
+  background-color: #24303c;
+  color: white;
+  font-size: 16px;
   font-weight: bold;
-  padding: 10px;
 }
 
-/* Estilo para las celdas de datos */
-td {
-  border: 1px solid #ccc;
-  padding: 10px;
+/* Filas pares en la tabla */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-/* Estilo para las filas impares (opcional) */
-tr:nth-child(odd) {
-  background-color: #f9f9f9;
+/* Botones en la tabla */
+.table-button {
+  background-color: #1f53c5;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.table-button:hover {
+  background-color: #163f94;
+}
+
+/* Botones genéricos */
+.botones {
+  cursor: pointer;
 }
