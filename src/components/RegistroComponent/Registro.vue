@@ -21,7 +21,7 @@
           <p v-if="error" style="color: red">{{ error }}</p>
           <button class="botones" @click="logout">Cerrar Sesión</button>
         </section>
-        <Table :data="tableData" @delete="handleDeleteRecord" />
+        <Table :data="tableData" @delete="handleDeleteRecord" @edit="editRecord" />
       </div>
     </header>
   </div>

@@ -1,10 +1,13 @@
 export default {
-    props: {
-        data: Array,
+  props: {
+    data: Array,
+  },
+  methods: {
+    editRecord(index) {
+      this.$emit('edit', index);
     },
-    methods: {
-        deleteRecord(index) {
-            this.$emit('delete', index);
-        },
+    deleteRecord(index) {
+      this.$emit('delete', index);
     },
+  },
 };

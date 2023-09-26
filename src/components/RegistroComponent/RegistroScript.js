@@ -38,6 +38,8 @@ export default {
       },
       tableData: tableData,
       error: '',
+      isEditing: false,
+      editIndex: -1,
     };
   },
   methods: {
@@ -78,10 +80,15 @@ export default {
         return;
       }
 
-      const newRecord = { ...this.formData };
-      this.tableData.push(newRecord);
+      if (this.isEditing) {
+        this.tableData[this.editIndex] = { ...this.formData };
+      } else {
+        const newRecord = { ...this.formData };
+        this.tableData.push(newRecord);
+      }
 
       this.resetForm();
+      this.isEditing = false;
     },
     logout() {
       localStorage.removeItem('isLoggedIn');
@@ -94,9 +101,23 @@ export default {
       this.formData.apellidoMaterno = '';
       this.formData.teléfono = '';
       this.error = '';
+      this.isEditing = false;
     },
     handleDeleteRecord(index) {
       this.tableData.splice(index, 1);
+    },
+    editRecord(index) {
+      this.isEditing = true;
+      this.editIndex = index;
+      const record = this.tableData[index];
+      this.formData.nombres = record.nombres;
+      this.formData.apellidoPaterno = record.apellidoPaterno;
+      this.formData.apellidoMaterno = record.apellidoMaterno;
+      this.formData.teléfono = record.teléfono;
+    },
+    cancelEdit() {
+      this.isEditing = false;
+      this.resetForm();
     },
   },
   components: {
