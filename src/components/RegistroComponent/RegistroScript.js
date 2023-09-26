@@ -81,27 +81,22 @@ export default {
       const newRecord = { ...this.formData };
       this.tableData.push(newRecord);
 
-      saveDataToLocalStorage(this.tableData);
-
       this.resetForm();
     },
     logout() {
       localStorage.removeItem('isLoggedIn');
       this.isLoggedIn = false;
-      location.reload()
+      location.reload();
     },
     resetForm() {
-      this.formData = {
-        nombres: '',
-        apellidoPaterno: '',
-        apellidoMaterno: '',
-        teléfono: '',
-      };
+      this.formData.nombres = '';
+      this.formData.apellidoPaterno = '';
+      this.formData.apellidoMaterno = '';
+      this.formData.teléfono = '';
       this.error = '';
     },
     handleDeleteRecord(index) {
       this.tableData.splice(index, 1);
-      saveDataToLocalStorage(this.tableData);
     },
   },
   components: {

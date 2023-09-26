@@ -13,8 +13,10 @@
               v-model="formData.apellidoMaterno" />
             <input class="controls" type="text" name="teléfono" placeholder="Ingrese su Teléfono"
               v-model="formData.teléfono" />
-            <button class="botones" type="submit">Registrar</button>
-            <button class="botones" type="button" @click="resetForm">Cancelar</button>
+            <button class="botones" type="submit">{{ isEditing ? 'Guardar Cambios' : 'Registrar' }}</button>
+            <button class="botones" type="button" @click="isEditing ? cancelEdit() : resetForm">
+              {{ isEditing ? 'Cancelar' : 'Limpiar' }}
+            </button>
           </form>
           <p v-if="error" style="color: red">{{ error }}</p>
           <button class="botones" @click="logout">Cerrar Sesión</button>
