@@ -90,12 +90,12 @@
 /* Botones en el formulario de registro */
 .form-register .botones {
   width: 100%;
-  background: #1f53c5;
   border: none;
   padding: 12px;
   color: white;
   margin: 16px 0;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .form-register .botones:hover {
@@ -153,4 +153,19 @@
 /* Botones genéricos */
 .botones {
   cursor: pointer;
+}
+
+/* Botón de editar en la tabla */
+.edit-button {
+  background-color: #1f53c5;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-button:hover {
+  background-color: #163f94;
 }
