@@ -14,7 +14,7 @@
             <input class="controls" type="text" name="teléfono" placeholder="Ingrese su Teléfono"
               v-model="formData.teléfono" />
             <button class="botones" type="submit">{{ isEditing ? 'Guardar Cambios' : 'Registrar' }}</button>
-            <button class="botones" type="button" @click="isEditing ? cancelEdit() : resetForm">
+            <button class="botones" type="button" @click="isEditing ? cancelEdit() : resetForm()">
               {{ isEditing ? 'Cancelar' : 'Limpiar' }}
             </button>
           </form>
